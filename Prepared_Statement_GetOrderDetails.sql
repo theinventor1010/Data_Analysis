@@ -1,0 +1,1 @@
+PREPARE GetOrderDetail FROM 'SELECT OrderID, Quantity, BillAmount AS Cost FROM Orders WHERE BookingID = (SELECT BookingID FROM Bookings WHERE CustomerID =  VALUES (?))';
